@@ -256,7 +256,9 @@ int gen10g_config(struct phy_device *phydev);
 int gen10g_startup(struct phy_device *phydev);
 int gen10g_shutdown(struct phy_device *phydev);
 int gen10g_discover_mmds(struct phy_device *phydev);
-
+#ifdef CONFIG_B53_SWITCH 
+int phy_b53_init(void);
+#endif
 int phy_mv88e61xx_init(void);
 int phy_aquantia_init(void);
 int phy_atheros_init(void);

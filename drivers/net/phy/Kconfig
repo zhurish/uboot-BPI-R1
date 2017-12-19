@@ -11,6 +11,18 @@ menuconfig PHYLIB
 	  Enable Ethernet PHY (physical media interface) support.
 
 if PHYLIB
+config B53_SWITCH 
+	bool "Broadcom BCM53xx (roboswitch) Ethernet switch PHY support."
+
+if B53_SWITCH 
+config B53_CPU_PORT 
+	int "CPU port"
+	default 8
+
+config B53_PHY_PORTS 
+	hex "Bitmask of PHY ports"
+
+endif # B53_SWITCH 
 
 config MV88E61XX_SWITCH
 	bool "Marvel MV88E61xx Ethernet switch PHY support."
