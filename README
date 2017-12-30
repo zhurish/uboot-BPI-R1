@@ -5,6 +5,8 @@
 # SPDX-License-Identifier:	GPL-2.0+
 #
 
+support tftpboot on u-boot, init BCM53125 on u-boot
+
 Summary:
 ========
 
